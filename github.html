@@ -1,0 +1,78 @@
+<h1>Installing Git</h1>
+Git isn’t usually set up by default on your computer, so you need to install and configure it before you can start using it to manage your code.
+It’s important to keep Git up to date, just like all the other software on your machine. Updates protect you from security vulnerabilities, fix bugs, and give you access to new features.
+
+<p>The recommended method of installing and maintaining Git is provided for three major platforms below:</p>
+
+<p>
+    <h3>Windows</h3>
+Download and install Git for Windows. Once installed, you’ll be able to use Git from the command prompt or PowerShell. 
+We recommend that you stick with the defaults selected during the installation unless you have a good reason to change them.
+</p>
+<p>
+    <h4>
+Linux
+</h4>
+On the terminal, just run sudo apt install git-all.
+</p>
+<h5>
+    Mac
+</h5>
+The best thing to do is to install Homebrew and then from the terminal run the command brew install git.
+
+<h2>
+    Start Using Git
+</h2>
+Once we have Git installed we need to "initialize" a repository before we can start using it.
+<p>
+    It’s very easy to do, just follow my lead:
+</p>
+<ol>
+   <p> 
+    <li>Access the wanted folder using the terminal (prompt cmd).</li>
+   </p>
+<li>To initialize a repository, we only have to run:</li>
+</ol>
+<p style="background-color: black; color: white; height: 30px;" >git init</p>
+<h4>
+    Output
+</h4>
+<img src="git2.png">
+
+
+<p>
+    P.S : This command just created a hidden folder called .git, where all the magic happens.
+</p>
+<h2>
+    Adding and committing Files:
+</h2>
+Remember that folder we create, now we are going to use it, let’s make file inside it (feel free to add whatever you want)
+
+<h2>
+Check the Status of Your Repository
+</h2>
+Now that we have some files in our repository, let us see how Git treats them. 
+To check the current status of your repository, we use the git status command.
+<p style="background-color: black; color: white; height: 30px;" >git status</p>
+<h4>Output</h4>
+<img src="git4.png">
+<h2>Adding Files for Git to Track</h2>
+At this point, we do not have any files for Git to track. We need to add files specifically to Git order to tell Git to track them. 
+We add files using add. After running git add . Git will add all the repository files to to an intermidate area called the staging area. 
+We can also add only what we want simply by running git add myFileName
+<p style="background-color: black; color: white; height: 30px;" >git add .</p>
+<h4>Output</h4>
+<img src="git6.png">
+<h2>Removing Files:</h2>
+Let’s say you have added files to Git that you do not want it to track. In such a situation, you tell Git to stop tracking them. 
+Yet, running a simple git rm will not only remove it from Git, but will also remove it from your local file system as well! To tell Git to stop tracking a file, but still keep it on your local system, run the following command:
+<p style="background-color: black; color: white; height: 30px;" > git rm --cached [file_name]</p>
+<h4>Output</h4>
+<img src="git8.png">
+<h2>Committing Changes</h2>
+Once you have staged your files, you can commit them into Git. 
+Imagine a commit as a snapshot in time where you can return back to access your repository at that stage. 
+You associate a commit message with every commit, which you can provide with the -m prefix.
+<p style="background-color: black; color: white; height: 30px;" >git commit -m 'first commit'</p>
+<h4>Output</h4>
+<img src="git10.png">
